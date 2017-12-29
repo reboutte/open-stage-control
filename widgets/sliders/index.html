@@ -596,6 +596,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#range_2" title="Range" class="md-nav__link">
+    Range
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#split" title="split" class="md-nav__link">
+    split
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
     </ul>
@@ -1082,6 +1102,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#range_2" title="Range" class="md-nav__link">
+    Range
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#split" title="split" class="md-nav__link">
+    split
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
     </ul>
@@ -1364,6 +1404,26 @@
 <h3 id="css_2"><code>css</code><a class="headerlink" href="#css_2" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>--color-knob:color;
 </pre></div>
+
+<h2 id="range_2">Range<a class="headerlink" href="#range_2" title="Permanent link">&para;</a></h2>
+<p>A range is a fader with two handles.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;range&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="split"><code>split</code><a class="headerlink" href="#split" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean|object</code></li>
+<li>default: <code>false</code></li>
+<li>usage:<ul>
+<li>set to <code>true</code> to send separate osc messages for <code>low</code> and <code>high</code> handles. The <code>address</code> will be the same as the widget's with <code>/low</code> or <code>/high</code> appended to it</li>
+<li>can be set as an object to specify a different <code>address</code> : <code>['/osc_address_low', '/osc_address_high']</code></li>
+</ul>
+</li>
+<li>note: the widget will only respond to its original osc address, not to the splitted version</li>
+</ul>
                 
                   
                 

@@ -667,6 +667,10 @@
 <td>--read-only</td>
 <td>disable session editing and session history changes</td>
 </tr>
+<tr>
+<td>--instance-name</td>
+<td>used to differenciate multiple instances in a zeroconf network</td>
+</tr>
 </tbody>
 </table>
 <p>Command-line only :</p>
@@ -697,6 +701,10 @@
 </pre></div>
 
 <p>This will create a headless app available through http on port 9999 with session.js loaded automatically.</p>
+<div class="admonition tip">
+<p class="admonition-title">What about HTTPS ?</p>
+<p>Security is out of the app's scope. If you are concerned about safety, using a private - protected - network should be enough.</p>
+</div>
 <h2 id="run-from-sources">Run from sources<a class="headerlink" href="#run-from-sources" title="Permanent link">&para;</a></h2>
 <p>Running the app from the sources slightly differs from using built binaries : instead of running a binary, we'll launch the app with npm.</p>
 <p><strong>1. Requirements</strong></p>

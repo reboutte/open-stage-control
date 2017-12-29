@@ -634,6 +634,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#image" title="Image" class="md-nav__link">
+    Image
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size" title="size" class="md-nav__link">
+    size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position" title="position" class="md-nav__link">
+    position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeat" title="repeat" class="md-nav__link">
+    repeat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border" title="border" class="md-nav__link">
+    border
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" title="cache" class="md-nav__link">
+    cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" title="value" class="md-nav__link">
+    value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
     </ul>
@@ -1062,6 +1117,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#image" title="Image" class="md-nav__link">
+    Image
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size" title="size" class="md-nav__link">
+    size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position" title="position" class="md-nav__link">
+    position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeat" title="repeat" class="md-nav__link">
+    repeat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border" title="border" class="md-nav__link">
+    border
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" title="cache" class="md-nav__link">
+    cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" title="value" class="md-nav__link">
+    value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
     </ul>
@@ -1317,6 +1427,52 @@
 <h3 id="logscale_2"><code>logScale</code><a class="headerlink" href="#logscale_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>see fader's <a href="../sliders/#fader"><code>logScale</code></a></li>
+</ul>
+<h2 id="image">Image<a class="headerlink" href="#image" title="Permanent link">&para;</a></h2>
+<p>Image displays an image from a file path/url or from a base64 encoded image string. Sending an empty message resets the widget to its initial <code>value</code>.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;image&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="size"><code>size</code><a class="headerlink" href="#size" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>cover</code></li>
+<li>usage: css <a href="https://www.w3schools.com/CSSref/css3_pr_background-size.asp">background-size</a></li>
+</ul>
+<h3 id="position"><code>position</code><a class="headerlink" href="#position" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>cover</code></li>
+<li>usage: css <a href="https://www.w3schools.com/CSSref/pr_background-position.asp">background-position</a></li>
+</ul>
+<h3 id="repeat"><code>repeat</code><a class="headerlink" href="#repeat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>no-repeat</code></li>
+<li>usage: css <a href="https://www.w3schools.com/CSSref/pr_background-repeat.asp">background-repeat</a></li>
+</ul>
+<h3 id="border"><code>border</code><a class="headerlink" href="#border" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to disable the image's borders and background-color.</li>
+</ul>
+<h3 id="cache"><code>cache</code><a class="headerlink" href="#cache" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>true</code></li>
+<li>usage: set to <code>false</code> to disable image caching (forces file reload when updating or editing the widget). When <code>true</code>, sending <code>'reload'</code> to the widget reloads its image without changing its value.</li>
+</ul>
+<h3 id="value"><code>value</code><a class="headerlink" href="#value" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>empty</code></li>
+<li>usage : initial image</li>
+<li>file url or absolute path</li>
+<li><a href="https://duckduckgo.com/?q=base64+encode+image&amp;ia=web">base64 encoded image</a> : <code>data:image/...</code></li>
 </ul>
                 
                   

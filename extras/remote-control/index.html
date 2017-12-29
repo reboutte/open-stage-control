@@ -464,8 +464,50 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#edit_soft-id-options" title="/EDIT_SOFT id options" class="md-nav__link">
-    /EDIT_SOFT id options
+  <a href="#editmerge-id-options" title="/EDIT/MERGE id options" class="md-nav__link">
+    /EDIT/MERGE id options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editget-target-id" title="/EDIT/GET target id" class="md-nav__link">
+    /EDIT/GET target id
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editget-target-address-prearg1-prearg2" title="/EDIT/GET target address preArg1 preArg2 ..." class="md-nav__link">
+    /EDIT/GET target address preArg1 preArg2 ...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-target-id" title="/GET target id" class="md-nav__link">
+    /GET target id
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-target-address-prearg1-prearg2" title="/GET target address preArg1 preArg2 ..." class="md-nav__link">
+    /GET target address preArg1 preArg2 ...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-target-id-value" title="/SET target id value" class="md-nav__link">
+    /SET target id value
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-address-prearg1-prearg2-value" title="/SET address preArg1 preArg2 ... value" class="md-nav__link">
+    /SET address preArg1 preArg2 ... value
   </a>
   
 </li>
@@ -543,8 +585,50 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#edit_soft-id-options" title="/EDIT_SOFT id options" class="md-nav__link">
-    /EDIT_SOFT id options
+  <a href="#editmerge-id-options" title="/EDIT/MERGE id options" class="md-nav__link">
+    /EDIT/MERGE id options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editget-target-id" title="/EDIT/GET target id" class="md-nav__link">
+    /EDIT/GET target id
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editget-target-address-prearg1-prearg2" title="/EDIT/GET target address preArg1 preArg2 ..." class="md-nav__link">
+    /EDIT/GET target address preArg1 preArg2 ...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-target-id" title="/GET target id" class="md-nav__link">
+    /GET target id
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-target-address-prearg1-prearg2" title="/GET target address preArg1 preArg2 ..." class="md-nav__link">
+    /GET target address preArg1 preArg2 ...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-target-id-value" title="/SET target id value" class="md-nav__link">
+    /SET target id value
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-address-prearg1-prearg2-value" title="/SET address preArg1 preArg2 ... value" class="md-nav__link">
+    /SET address preArg1 preArg2 ... value
   </a>
   
 </li>
@@ -583,7 +667,7 @@
 <div class="admonition warning">
 <p>Editing a widget can be cpu expensive, hence updating the UI continuously is not a good idea</p>
 </div>
-<h2 id="edit_soft-id-options"><code>/EDIT_SOFT id options</code><a class="headerlink" href="#edit_soft-id-options" title="Permanent link">&para;</a></h2>
+<h2 id="editmerge-id-options"><code>/EDIT/MERGE id options</code><a class="headerlink" href="#editmerge-id-options" title="Permanent link">&para;</a></h2>
 <p>Apply a set of options to an existing widget by merging them to the widget's options.  </p>
 <ul>
 <li><code>id</code>: <code>string</code>, widget's <code>id</code></li>
@@ -593,6 +677,67 @@
 <div class="admonition warning">
 <p>Editing a widget can be cpu expensive, hence updating the UI continuously is not a good idea</p>
 </div>
+<h2 id="editget-target-id"><code>/EDIT/GET target id</code><a class="headerlink" href="#editget-target-id" title="Permanent link">&para;</a></h2>
+<p>Sends back a widget's data (JSON stringified object), including its children, to specified target.</p>
+<ul>
+<li><code>target</code>: <code>string</code>, <code>ip:port</code> pair</li>
+<li><code>id</code>: <code>string</code>, widget's <code>id</code></li>
+</ul>
+<p>Returns <code>/EDIT/GET id data</code></p>
+<ul>
+<li><code>id</code>: <code>string</code></li>
+<li><code>data</code>: <code>string</code></li>
+</ul>
+<h2 id="editget-target-address-prearg1-prearg2"><code>/EDIT/GET target address preArg1 preArg2 ...</code><a class="headerlink" href="#editget-target-address-prearg1-prearg2" title="Permanent link">&para;</a></h2>
+<p>Sends back a widget's data (JSON stringified object), including its children, to specified target.</p>
+<ul>
+<li><code>target</code>: <code>string</code>, <code>ip:port</code> pair</li>
+<li><code>address</code>: <code>string</code>, widget's <code>address</code></li>
+<li><code>preArg[1...]</code>: <code>*</code>, widget's <code>preArgs</code></li>
+</ul>
+<p>Returns <code>/EDIT/GET address preArg1 preArg2 ... data</code></p>
+<ul>
+<li><code>address</code>: <code>string</code>, widget's <code>address</code></li>
+<li><code>preArg[1...]</code>: <code>*</code>, widget's <code>preArgs</code></li>
+<li><code>data</code>: <code>string</code></li>
+</ul>
+<h2 id="get-target-id"><code>/GET target id</code><a class="headerlink" href="#get-target-id" title="Permanent link">&para;</a></h2>
+<p>Sends back a widget's value to specified target.</p>
+<ul>
+<li><code>target</code>: <code>string</code>, <code>ip:port</code> pair</li>
+<li><code>id</code>: <code>string</code>, widget's <code>id</code></li>
+</ul>
+<p>Returns <code>/GET id value</code></p>
+<ul>
+<li><code>id</code>: <code>string</code></li>
+<li><code>value</code>: <code>*</code></li>
+</ul>
+<h2 id="get-target-address-prearg1-prearg2"><code>/GET target address preArg1 preArg2 ...</code><a class="headerlink" href="#get-target-address-prearg1-prearg2" title="Permanent link">&para;</a></h2>
+<p>Sends back a widget's value to specified target.</p>
+<ul>
+<li><code>target</code>: <code>string</code>, <code>ip:port</code> pair</li>
+<li><code>address</code>: <code>string</code>, widget's <code>address</code></li>
+<li><code>preArg[1...]</code>: <code>*</code>, widget's <code>preArgs</code></li>
+</ul>
+<p>Returns <code>/GET address preArg1 preArg2 ... value</code></p>
+<ul>
+<li><code>address</code>: <code>string</code>, widget's <code>address</code></li>
+<li><code>preArg[1...]</code>: <code>*</code>, widget's <code>preArgs</code></li>
+<li><code>value</code>: <code>*</code></li>
+</ul>
+<h2 id="set-target-id-value"><code>/SET target id value</code><a class="headerlink" href="#set-target-id-value" title="Permanent link">&para;</a></h2>
+<p>Set a widget's value as if it was interacted with from the interface. This is likely to make it send its value.</p>
+<ul>
+<li><code>id</code>: <code>string</code>, widget's <code>id</code></li>
+<li><code>value</code>: <code>*</code>, widget's new value</li>
+</ul>
+<h2 id="set-address-prearg1-prearg2-value"><code>/SET address preArg1 preArg2 ... value</code><a class="headerlink" href="#set-address-prearg1-prearg2-value" title="Permanent link">&para;</a></h2>
+<p>Set a widget's value as if it was interacted with from the interface. This is likely to make it send its value.</p>
+<ul>
+<li><code>address</code>: <code>string</code>, widget's <code>address</code></li>
+<li><code>preArg[1...]</code>: <code>*</code>, widget's <code>preArgs</code></li>
+<li><code>value</code>: <code>*</code>, widget's new value</li>
+</ul>
 <h2 id="tabs-id-id-etc"><code>/TABS id id etc</code><a class="headerlink" href="#tabs-id-id-etc" title="Permanent link">&para;</a></h2>
 <p>Open the tabs designated by the <code>id</code> parameters. The target tab link must be accesible (opening a tab located in a disabled tab won't work unless you specify the parent tab's <code>id</code> before; the safest way to go is to pass the whole tab tree to enable).</p>
                 

@@ -720,6 +720,14 @@
 <li><code>cc</code>: integer between 0 and 127</li>
 <li><code>value</code>: integer between 0 and 127</li>
 </ul>
+<p>Example:</p>
+<p>A fader might be configured as follows in order to send a MIDI control message (a volume control in this example):</p>
+<ul>
+<li><code>address</code>: /control</li>
+<li><code>pre-args</code>: [1, 7] (MIDI channel 1, control number 7 generally used as volume control)</li>
+<li><code>range</code>: {"min": 0, "max": 127} (MIDI values are encoded in this range)</li>
+<li><code>target</code>: ["midi:device_name"]</li>
+</ul>
 <h3 id="program-channel-program"><code>/program channel program</code><a class="headerlink" href="#program-channel-program" title="Permanent link">&para;</a></h3>
 <p>Program change event.</p>
 <ul>
@@ -738,7 +746,7 @@
 <li><code>msg</code>: hexadecimal sysex data string of the form <code>f0 ... f7</code>. You may include placeholders of the form <code>nn</code> which will be replaced by <code>v1, .., vN</code> respectively.</li>
 <li><code>v1, .., vN</code>: values encoded as hexadecimal data strings to include in <code>msg</code>. Most probably, you will need to sepcify a <a href="../../extras/custom-module/">custom module</a> in order to convert numeric widget values into the required hexadecimal format. In general, this conversion will be different for each manufacturer / device.</li>
 </ul>
-<p>For a very simple example, refer to session 'sysex_device_inquiry.js' found in the application's sub folder 'resources/app/examples/'. Please remember to adjust the button's <code>target</code> to the <code>device_name</code> used in your MIDI setup.</p>
+<p>For a very simple example, refer to session 'sysex.json' found in the application's sub folder 'resources/app/examples/'. Please remember to adjust the button's <code>target</code> to the <code>device_name</code> used in your MIDI setup.</p>
                 
                   
                 
