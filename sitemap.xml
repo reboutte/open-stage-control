@@ -84,6 +84,12 @@
     </url>
         
     <url>
+     <loc>/widgets/inputs/</loc>
+     <lastmod>2018-01-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/widgets/maths/</loc>
      <lastmod>2018-01-31</lastmod>
      <changefreq>daily</changefreq>

@@ -1191,6 +1191,71 @@
             "title": "css"
         }, 
         {
+            "location": "/widgets/inputs/", 
+            "text": "inputs\n\n\nInput\n\n\n{\n\n    \ntype\n:\ninput\n,\n\n    \n// etc\n\n\n}\n\n\n\n\n\nwidgetId\n\n\n\n\ntype: \nobject\n\n\ndefault: \nempty\n\n\nusage: a widget's \nid\n whose value will be linked to the input\n\n\n\n\neditable\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: set to \nfalse\n to make the input non-editable\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to display the input horizontally\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nKeys\n\n\n{\n\n    \ntype\n:\nkeys\n,\n\n    \n// etc\n\n\n}\n\n\n\n\n\nwidgetId\n\n\n\n\ntype: \nobject\n\n\ndefault: \nempty\n\n\nusage: a widget's \nid\n whose value will be linked to the Keys\n\n\n\n\nbinding\n\n\n\n\ntype: \nstring|array\n\n\ndefault: \n''\n\n\nusage: \nkeyboardjs\n key combo string or array of strings.\n\n\n\n\nkeydown\n\n\n\n\ntype: \nstring\n\n\ndefault: \n''\n\n\nusage: \nMathJS\n expression whose output will be sent to the linked widget. This will be evaluated when the key combo is pressed. Available variables are ;\n\n\nvalue\n: widget's value\n\n\nkey\n: pressed key name (usefull for handling multiple keys with a single \nkeys\n widget)\n\n\nctrl\n: control key state\n\n\nalt\n: alt key state    \n\n\nshift\n: shift key state   \n\n\nsuper\n: command/windows key state   \n\n\n\n\nkeyup\n\n\n\n\ntype: \nstring\n\n\ndefault: \n''\n\n\nusage: same as \nkeydown\n, but evaluated when releasing the key combo.\n\n\n\n\nrepeat\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: set to \nfalse\n to prevent \nkeydown\n repeats when holding the key combo pressed.", 
+            "title": "Inputs"
+        }, 
+        {
+            "location": "/widgets/inputs/#inputs", 
+            "text": "", 
+            "title": "inputs"
+        }, 
+        {
+            "location": "/widgets/inputs/#input", 
+            "text": "{ \n     type : input , \n     // etc  }", 
+            "title": "Input"
+        }, 
+        {
+            "location": "/widgets/inputs/#widgetid", 
+            "text": "type:  object  default:  empty  usage: a widget's  id  whose value will be linked to the input", 
+            "title": "widgetId"
+        }, 
+        {
+            "location": "/widgets/inputs/#editable", 
+            "text": "type:  boolean  default:  true  usage: set to  false  to make the input non-editable", 
+            "title": "editable"
+        }, 
+        {
+            "location": "/widgets/inputs/#horizontal", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to display the input horizontally", 
+            "title": "horizontal"
+        }, 
+        {
+            "location": "/widgets/inputs/#unit", 
+            "text": "type:  string  default:  empty  usage:  unit  will be appended to the displayed widget's value (it doesn't affect osc messages)", 
+            "title": "unit"
+        }, 
+        {
+            "location": "/widgets/inputs/#keys", 
+            "text": "{ \n     type : keys , \n     // etc  }", 
+            "title": "Keys"
+        }, 
+        {
+            "location": "/widgets/inputs/#widgetid_1", 
+            "text": "type:  object  default:  empty  usage: a widget's  id  whose value will be linked to the Keys", 
+            "title": "widgetId"
+        }, 
+        {
+            "location": "/widgets/inputs/#binding", 
+            "text": "type:  string|array  default:  ''  usage:  keyboardjs  key combo string or array of strings.", 
+            "title": "binding"
+        }, 
+        {
+            "location": "/widgets/inputs/#keydown", 
+            "text": "type:  string  default:  ''  usage:  MathJS  expression whose output will be sent to the linked widget. This will be evaluated when the key combo is pressed. Available variables are ;  value : widget's value  key : pressed key name (usefull for handling multiple keys with a single  keys  widget)  ctrl : control key state  alt : alt key state      shift : shift key state     super : command/windows key state", 
+            "title": "keydown"
+        }, 
+        {
+            "location": "/widgets/inputs/#keyup", 
+            "text": "type:  string  default:  ''  usage: same as  keydown , but evaluated when releasing the key combo.", 
+            "title": "keyup"
+        }, 
+        {
+            "location": "/widgets/inputs/#repeat", 
+            "text": "type:  boolean  default:  true  usage: set to  false  to prevent  keydown  repeats when holding the key combo pressed.", 
+            "title": "repeat"
+        }, 
+        {
             "location": "/widgets/maths/", 
             "text": "Maths\n\n\nMaths do the maths !\n\n\nFormula\n\n\nFormula evaluates mathematical expressions over other widgets' values each one of these widgets changes.\n\n\n{\n\n    \ntype\n:\nformula\n,\n\n    \n// etc\n\n\n}\n\n\n\n\n\nformula\n\n\n\n\ntype: \nstring\n\n\ndefault: \n''\n\n\nusage: a \nmathjs\n expression in which\n\n\n${id}\n will be replaced the \nid\n's value  \n\n\nexample: \n${fader_1} * 2 + ${fader_2}\n\n\n\n\n\n\nimportant note\n: contrary to what is stated in \nmathjs\n' documentation, \nmatrix indexes are zero-based\n here\n\n\n\n\ncondition\n\n\n\n\ntype: \nstring\n\n\ndefault: \n''\n\n\nusage:\n\n\na \nmathjs\n comparison expression that bypasses widget's osc sending when returning\nfalse\n\n\nexample: \n${fader_1} \n 0.5\n\n\n\n\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsplit\n\n\n\n\ntype: \nobject\n\n\ndefault: \n[]\n\n\nusage: specify a different \naddress\n for each item of the widget's value : \n['/a', '/b']\n\n\nnote: only use this is the formula return an \narray", 
             "title": "Maths"
