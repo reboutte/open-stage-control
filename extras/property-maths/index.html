@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="A libre desktop OSC bi-directionnal control surface application.">
+        <meta name="description" content="Libre and modular OSC / MIDI controller">
       
       
       
@@ -29,22 +29,22 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/img/logo-nobadge.png?1">
-      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.4">
+      <link rel="shortcut icon" href="../../img/logo-nobadge.png?1">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.2">
     
     
       
-        <title>Open Stage Control</title>
+        <title>Property maths - Open Stage Control</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/application.aa3de92b.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.6d5aee8d.css">
       
-        <link rel="stylesheet" href="/assets/stylesheets/application-palette.792431c1.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
       
     
     
-      <script src="/assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       
@@ -54,7 +54,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="/css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     
   </head>
@@ -62,13 +62,13 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body dir="" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
   
     <svg class="md-svg">
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -76,14 +76,18 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#property-maths" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/" title="Open Stage Control" class="md-header-nav__button md-logo">
+        <a href="../.." title="Open Stage Control" class="md-header-nav__button md-logo">
           
-            <img src="/img/logo-nobadge.svg" width="24" height="24">
+            <img src="../../img/logo-nobadge.svg" width="24" height="24">
           
         </a>
       </div>
@@ -98,7 +102,7 @@
                 Open Stage Control
               </span>
               <span class="md-header-nav__topic">
-                
+                Property maths
               </span>
             
           
@@ -170,14 +174,16 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="/" title="OSC Control Surface" class="md-tabs__link md-tabs__link--active">
+      <a href="../.." title="OSC Control Surface" class="md-tabs__link">
         OSC Control Surface
       </a>
     
@@ -195,7 +201,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/widgets/widgets/" title="Widgets reference" class="md-tabs__link">
+        <a href="../../widgets/widgets/" title="Widgets reference" class="md-tabs__link">
           Widgets reference
         </a>
       
@@ -208,7 +214,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/extras/property-inheritance/" title="Extras" class="md-tabs__link">
+        <a href="../property-inheritance/" title="Extras" class="md-tabs__link md-tabs__link--active">
           Extras
         </a>
       
@@ -235,7 +241,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        <img src="/img/logo-nobadge.svg" width="24" height="24">
+        <img src="../../img/logo-nobadge.svg" width="24" height="24">
       
     </span>
     Open Stage Control
@@ -271,7 +277,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/" title="OSC Control Surface" class="md-nav__link">
+    <a href="../.." title="OSC Control Surface" class="md-nav__link">
       OSC Control Surface
     </a>
   </li>
@@ -283,7 +289,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/getting-started/" title="Getting started" class="md-nav__link">
+    <a href="../../getting-started/" title="Getting started" class="md-nav__link">
       Getting started
     </a>
   </li>
@@ -295,7 +301,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/interface/" title="User interface" class="md-nav__link">
+    <a href="../../interface/" title="User interface" class="md-nav__link">
       User interface
     </a>
   </li>
@@ -307,7 +313,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/editing-sessions/" title="Editing sessions" class="md-nav__link">
+    <a href="../../editing-sessions/" title="Editing sessions" class="md-nav__link">
       Editing sessions
     </a>
   </li>
@@ -338,7 +344,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/widgets/widgets/" title="Widget properties" class="md-nav__link">
+    <a href="../../widgets/widgets/" title="Widget properties" class="md-nav__link">
       Widget properties
     </a>
   </li>
@@ -350,7 +356,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/widgets/containers/" title="Containers" class="md-nav__link">
+    <a href="../../widgets/containers/" title="Containers" class="md-nav__link">
       Containers
     </a>
   </li>
@@ -362,7 +368,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/widgets/sliders/" title="Sliders" class="md-nav__link">
+    <a href="../../widgets/sliders/" title="Sliders" class="md-nav__link">
       Sliders
     </a>
   </li>
@@ -374,7 +380,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/widgets/pads/" title="Pads" class="md-nav__link">
+    <a href="../../widgets/pads/" title="Pads" class="md-nav__link">
       Pads
     </a>
   </li>
@@ -386,7 +392,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/widgets/buttons/" title="Buttons" class="md-nav__link">
+    <a href="../../widgets/buttons/" title="Buttons" class="md-nav__link">
       Buttons
     </a>
   </li>
@@ -398,7 +404,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/widgets/switchers/" title="Switchers" class="md-nav__link">
+    <a href="../../widgets/switchers/" title="Switchers" class="md-nav__link">
       Switchers
     </a>
   </li>
@@ -410,7 +416,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/widgets/plots/" title="Plots" class="md-nav__link">
+    <a href="../../widgets/plots/" title="Plots" class="md-nav__link">
       Plots
     </a>
   </li>
@@ -422,7 +428,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/widgets/matrices/" title="Matrices" class="md-nav__link">
+    <a href="../../widgets/matrices/" title="Matrices" class="md-nav__link">
       Matrices
     </a>
   </li>
@@ -434,7 +440,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/widgets/inputs/" title="Inputs" class="md-nav__link">
+    <a href="../../widgets/inputs/" title="Inputs" class="md-nav__link">
       Inputs
     </a>
   </li>
@@ -446,7 +452,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/widgets/maths/" title="Maths" class="md-nav__link">
+    <a href="../../widgets/maths/" title="Maths" class="md-nav__link">
       Maths
     </a>
   </li>
@@ -461,10 +467,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Extras
@@ -482,7 +490,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extras/property-inheritance/" title="Property inheritance" class="md-nav__link">
+    <a href="../property-inheritance/" title="Property inheritance" class="md-nav__link">
       Property inheritance
     </a>
   </li>
@@ -492,9 +500,30 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="Property maths" class="md-nav__link md-nav__link--active">
+      Property maths
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="/extras/theming/" title="Theming" class="md-nav__link">
+    <a href="../theming/" title="Theming" class="md-nav__link">
       Theming
     </a>
   </li>
@@ -506,7 +535,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extras/url-options/" title="URL options" class="md-nav__link">
+    <a href="../url-options/" title="URL options" class="md-nav__link">
       URL options
     </a>
   </li>
@@ -518,7 +547,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extras/remote-control/" title="Remote control" class="md-nav__link">
+    <a href="../remote-control/" title="Remote control" class="md-nav__link">
       Remote control
     </a>
   </li>
@@ -530,7 +559,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extras/custom-module/" title="Custom module" class="md-nav__link">
+    <a href="../custom-module/" title="Custom module" class="md-nav__link">
       Custom module
     </a>
   </li>
@@ -542,7 +571,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extras/midi/" title="Midi" class="md-nav__link">
+    <a href="../midi/" title="Midi" class="md-nav__link">
       Midi
     </a>
   </li>
@@ -559,7 +588,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/examples/" title="Examples" class="md-nav__link">
+    <a href="../../examples/" title="Examples" class="md-nav__link">
       Examples
     </a>
   </li>
@@ -571,7 +600,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/credits/" title="Credits" class="md-nav__link">
+    <a href="../../credits/" title="Credits" class="md-nav__link">
       Credits
     </a>
   </li>
@@ -584,12 +613,57 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/jean-emmanuel/open-stage-control/tree/master/resources/docs/extras/property-maths.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="property-maths">Property maths<a class="headerlink" href="#property-maths" title="Permanent link">&para;</a></h1>
+<p>The following syntax allow writing mathematical formulas in widgets' properties:</p>
+<div class="codehilite"><pre><span></span>#{ FORMULA }
+</pre></div>
 
+<p>Where FORMULA is a valid <a href="http://mathjs.org/docs/expressions/syntax.html">MathJS</a> expression:</p>
+<ul>
+<li><a href="http://mathjs.org/docs/expressions/syntax.html">syntax documentation</a></li>
+<li><a href="http://mathjs.org/docs/reference/functions.html">available functions</a></li>
+<li><a href="http://mathjs.org/docs/reference/constants.html">available constants</a></li>
+<li>formulas can be <a href="http://mathjs.org/docs/expressions/syntax.html#multiline-expressions">multiline</a></li>
+<li>property inheritance calls (<code>@{...}</code>) are always resolved before formulas</li>
+<li>arrays / matrices indexes are <strong>zero-based</strong> (ie <code>[&quot;a&quot;,&quot;b&quot;][0]</code> returns <code>&quot;a&quot;</code>)</li>
+<li>strings can be multiline when enclosed in backticks instead of double quotes (<code>` `</code>)</li>
+<li>inner closing brackets (<code>}</code>) must be escaped with a backslash (<code>\}</code>)</li>
+</ul>
+<p>Additionnal functions:</p>
+<ul>
+<li><code>unpack(x)</code>: remove an array's brackets (<code>unpack([1,2])</code> returns <code>&quot;1, 2&quot;</code>)</li>
+<li><code>pad(x, padding)</code>: add leading zeros if the length the integer part of <code>x</code> is smaller than <code>padding</code> (<code>pad(1,2)</code> returns <code>&quot;01&quot;</code>)</li>
+</ul>
+<div class="admonition tip">
+<p>A single widget property can contain multiple formulas. Variables and functions declared in a formula are available to subsequent formulas in the same property definition.</p>
+</div>
+                
+                  
+                
+              
               
                 
               
@@ -600,6 +674,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../property-inheritance/" title="Property inheritance" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Property inheritance
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../theming/" title="Theming" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Theming
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -624,9 +733,13 @@
       
     </div>
     
-      <script src="/assets/javascripts/application.268f9a19.js"></script>
+      <script src="../../assets/javascripts/application.268f9a19.js"></script>
       
-      <script>app.initialize({version:"0.17.2",url:{base:""}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+        <script src="../../search/require.js"></script>
+      
+        <script src="../../search/search.js"></script>
       
     
     
