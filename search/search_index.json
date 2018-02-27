@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Open Stage Control\n\n\nLibre and modular OSC / MIDI controller\n\n\nOpen Stage Control is a desktop OSC bi-directionnal control surface application. It's built on web technologies and run as an \nElectron\n web server that accepts any number of clients.\n\n\nTry the online demo (Chrome 50+ required)\n\n\nDownload the latest release\n\n\n\n\nSupported platforms\n\n\nThe server can run on all \nplatforms supported by Electron\n. Clients can be :\n- any system running Chrome/Chromium version \n50\n or later (Linux, MacOS, Windows, Android, etc)\n- iOS version \n9.3\n or later\n\n\nFirefox is \nnot\n supported.\n\n\nNeed help ? Found a bug ?\n\n\nHead over the github \nissue tracker\n :)", 
+            "text": "Open Stage Control\n\n\nLibre and modular OSC / MIDI controller\n\n\nOpen Stage Control is a desktop OSC bi-directionnal control surface application. It's built on web technologies and run as an \nElectron\n web server that accepts any number of clients.\n\n\nTry the online demo (Chrome 50+ required)\n\n\nDownload the latest release\n\n\n\n\nSupported platforms\n\n\nThe server can run on all \nplatforms supported by Electron\n. Clients just need to connect to the server with a compatible browser :\n- any system running Chrome/Chromium version \n50\n or later (Linux, MacOS, Windows, Android, etc)\n- iOS version \n9.3\n or later\n\n\nFirefox is \nnot\n supported.\n\n\nNeed help ? Found a bug ?\n\n\nHead over the github \nissue tracker\n :)", 
             "title": "OSC Control Surface"
         }, 
         {
@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/#supported-platforms", 
-            "text": "The server can run on all  platforms supported by Electron . Clients can be :\n- any system running Chrome/Chromium version  50  or later (Linux, MacOS, Windows, Android, etc)\n- iOS version  9.3  or later  Firefox is  not  supported.", 
+            "text": "The server can run on all  platforms supported by Electron . Clients just need to connect to the server with a compatible browser :\n- any system running Chrome/Chromium version  50  or later (Linux, MacOS, Windows, Android, etc)\n- iOS version  9.3  or later  Firefox is  not  supported.", 
             "title": "Supported platforms"
         }, 
         {
