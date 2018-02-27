@@ -739,100 +739,104 @@
 <table>
 <thead>
 <tr>
+<th></th>
 <th>Option</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>-s, --send</td>
+<td><code>-s</code></td>
+<td><code>--send</code></td>
 <td>default targets for all widgets (ip:port pairs)</td>
 </tr>
 <tr>
-<td>-l, --load</td>
+<td><code>-l</code></td>
+<td><code>--load</code></td>
 <td>session file to load</td>
 </tr>
 <tr>
-<td>-b, --blank</td>
+<td><code>-b</code></td>
+<td><code>--blank</code></td>
 <td>load a blank session and start the editor</td>
 </tr>
 <tr>
-<td>-c, --custom-module</td>
+<td><code>-c</code></td>
+<td><code>--custom-module</code></td>
 <td>custom module file to load</td>
 </tr>
 <tr>
-<td>-p, --port</td>
+<td><code>-p</code></td>
+<td><code>--port</code></td>
 <td>http port of the server (default to 8080)</td>
 </tr>
 <tr>
-<td>-o, --osc-port</td>
+<td><code>-o</code></td>
+<td><code>--osc-port</code></td>
 <td>osc input port (default to --port)</td>
 </tr>
 <tr>
-<td>-m, --midi</td>
+<td><code>-m</code></td>
+<td><code>--midi</code></td>
 <td>midi router settings (requires python-pyo)</td>
 </tr>
 <tr>
-<td>-d, --debug</td>
+<td><code>-d</code></td>
+<td><code>--debug</code></td>
 <td>log received osc messages in the console</td>
 </tr>
 <tr>
-<td>-n, --no-gui</td>
+<td><code>-n</code></td>
+<td><code>--no-gui</code></td>
 <td>disable default gui</td>
 </tr>
 <tr>
-<td>-g, --gui-only</td>
+<td><code>-g</code></td>
+<td><code>--gui-only</code></td>
 <td>app server's url. If true, local port (--port) is used</td>
 </tr>
 <tr>
-<td>-t, --theme</td>
+<td><code>-t</code></td>
+<td><code>--theme</code></td>
 <td>theme name or path (mutliple values allowed)</td>
 </tr>
 <tr>
-<td>-e, --examples</td>
+<td><code>-e</code></td>
+<td><code>--examples</code></td>
 <td>list examples instead of recent sessions</td>
 </tr>
 <tr>
-<td>--url-options</td>
+<td></td>
+<td><code>--url-options</code></td>
 <td><a href="../extras/url-options">url options</a> (opt=value pairs)</td>
 </tr>
 <tr>
-<td>--disable-vsync</td>
+<td></td>
+<td><code>--disable-vsync</code></td>
 <td>disable gui's vertical synchronization</td>
 </tr>
 <tr>
-<td>--disable-gpu</td>
+<td></td>
+<td><code>--disable-gpu</code></td>
 <td>disable hardware acceleration</td>
 </tr>
 <tr>
-<td>--read-only</td>
+<td></td>
+<td><code>--read-only</code></td>
 <td>disable session editing and session history changes</td>
 </tr>
 <tr>
-<td>--instance-name</td>
+<td></td>
+<td><code>--instance-name</code></td>
 <td>used to differenciate multiple instances in a zeroconf network</td>
 </tr>
 </tbody>
 </table>
 <p>Command-line only :</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-h, --help</td>
-<td>print available options</td>
-</tr>
-<tr>
-<td>-v, --version</td>
-<td>print version number</td>
-</tr>
-</tbody>
-</table>
+<p>|| Option | Description |
+|---|---|
+| <code>-h</code> | <code>--help</code> | print available options |
+| <code>-v</code> | <code>--version</code> | print version number |</p>
 <p><strong>Examples</strong></p>
 <div class="codehilite"><pre><span></span>$ open-stage-control --send 127.0.0.1:5555 127.0.0.1:6666 --port 7777
 </pre></div>
