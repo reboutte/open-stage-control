@@ -830,6 +830,11 @@
 <td><code>--instance-name</code></td>
 <td>used to differenciate multiple instances in a zeroconf network</td>
 </tr>
+<tr>
+<td></td>
+<td><code>--fullscreen</code></td>
+<td>launch the default client gui in fullscreen mode (F11 to exit)</td>
+</tr>
 </tbody>
 </table>
 <p>Command-line only :</p>
@@ -855,11 +860,11 @@
 </tbody>
 </table>
 <p><strong>Examples</strong></p>
-<div class="codehilite"><pre><span></span>$ open-stage-control --send 127.0.0.1:5555 127.0.0.1:6666 --port 7777
+<div class="codehilite"><pre><span></span>open-stage-control --send <span class="m">127</span>.0.0.1:5555 <span class="m">127</span>.0.0.1:6666 --port <span class="m">7777</span>
 </pre></div>
 
 <p>This will create an app listening on port 7777 for synchronization messages, and sending its widgets state changes to ports 5555 and 6666.</p>
-<div class="codehilite"><pre><span></span>$ open-stage-control --no-gui --load path/to/session.js --port 9999
+<div class="codehilite"><pre><span></span>open-stage-control --no-gui --load path/to/session.js --port <span class="m">9999</span>
 </pre></div>
 
 <p>This will create a headless app available through http on port 9999 with session.js loaded automatically.</p>
@@ -868,25 +873,24 @@
 <p>Security is out of the app's scope. If you are concerned about safety, using a private - protected - network should be enough.</p>
 </div>
 <h2 id="run-from-sources">Run from sources<a class="headerlink" href="#run-from-sources" title="Permanent link">&para;</a></h2>
-<p>Running the app from the sources slightly differs from using built binaries : instead of running a binary, we'll launch the app with npm.</p>
+<p>Running the app from the sources slightly differs from using built binaries : we'll build and launch the app with npm (node package manager).</p>
 <p><strong>1. Requirements</strong></p>
 <ul>
-<li><a href="https://nodejs.org/en/download/package-manager/">Node.js &gt;= 4</a></li>
-<li><a href="https://www.npmjs.com/">npm</a></li>
+<li><a href="https://nodejs.org/en/#download">Node.js &gt;= 4</a></li>
+<li><a href="https://git-scm.com/downloads">git</a></li>
 </ul>
-<div class="codehilite"><pre><span></span>$ sudo apt-get install nodejs npm  # install nodejs &amp; npm
-$ sudo npm install -g npm   # update npm
-</pre></div>
-
 <p><strong>2. Download sources</strong></p>
-<div class="codehilite"><pre><span></span>$ git clone https://github.com/jean-emmanuel/open-stage-control
-$ cd open-stage-control/
-$ npm install
-$ npm run build
+<div class="codehilite"><pre><span></span>git clone https://github.com/jean-emmanuel/open-stage-control
+<span class="nb">cd</span> open-stage-control/
+<span class="c1"># uncomment next line if you want the latest release</span>
+<span class="c1"># instead of the current development version</span>
+<span class="c1"># git checkout $(git describe --tags `git rev-list --tags --max-count=1`)</span>
+npm install
+npm run build
 </pre></div>
 
 <p><strong>3. Run !</strong></p>
-<div class="codehilite"><pre><span></span>$ npm start [ -- options]
+<div class="codehilite"><pre><span></span>npm start <span class="o">[</span> -- options<span class="o">]</span>
 </pre></div>
 
 <div class="admonition note">
@@ -895,32 +899,28 @@ $ npm run build
 <h2 id="build-from-sources">Build from sources<a class="headerlink" href="#build-from-sources" title="Permanent link">&para;</a></h2>
 <p><strong>1. Requirements</strong></p>
 <ul>
-<li><a href="https://nodejs.org/en/download/package-manager/">Node.js &gt;= 4</a></li>
-<li><a href="https://www.npmjs.com/">npm</a></li>
+<li><a href="https://nodejs.org/en/#download">Node.js &gt;= 4</a></li>
+<li><a href="https://git-scm.com/downloads">git</a></li>
 </ul>
-<div class="codehilite"><pre><span></span>$ sudo apt-get install nodejs npm  # install nodejs &amp; npm
-$ sudo npm install -g npm   # update npm
-</pre></div>
+<p><strong>2. Download sources &amp; build package</strong></p>
+<div class="codehilite"><pre><span></span>git clone https://github.com/jean-emmanuel/open-stage-control
+<span class="nb">cd</span> open-stage-control/
+<span class="c1"># uncomment next line if you want the latest release</span>
+<span class="c1"># instead of the current development version</span>
+<span class="c1"># git checkout $(git describe --tags `git rev-list --tags --max-count=1`)</span>
+npm install
 
-<p><strong>2. Build</strong></p>
-<div class="codehilite"><pre><span></span>$ git clone https://github.com/jean-emmanuel/open-stage-control
-$ cd open-stage-control
-$ npm install
-$ export PLATFORM=TARGET_PLATFORM # TARGET_PLATFORM can be linux, win32 (windows) or darwin (os x)
-$ export ARCH=TARGET_ARCH         # TARGET_ARCH can be ia32, x64 or armv7l
-$ npm run package
+<span class="c1"># TARGET_PLATFORM can be linux, win32 (windows) or darwin (os x)</span>
+<span class="nb">export</span> <span class="nv">PLATFORM</span><span class="o">=</span>TARGET_PLATFORM
+<span class="c1"># TARGET_ARCH can be ia32, x64 or armv7l</span>
+<span class="nb">export</span> <span class="nv">ARCH</span><span class="o">=</span>TARGET_ARCH
 
-# Do the following if you want a deb package for debian/ubuntu
+npm run package
 
-$ npm run deb32
-
-# or
-
-$ npm run deb64
-
-# or
-
-$ npm run debarm
+<span class="c1"># Do one of the following if you want a deb package for debian/ubuntu</span>
+npm run deb32
+npm run deb64
+npm run debarm
 </pre></div>
 
 <p>This will build the app in <code>dist/open-stage-control-PLATFORM-ARCH</code>.</p>
@@ -930,13 +930,13 @@ $ npm run debarm
 <h2 id="running-in-a-headless-context">Running in a headless context<a class="headerlink" href="#running-in-a-headless-context" title="Permanent link">&para;</a></h2>
 <p>Electron, Open Stage Control's engine, is based on chromium and can't run out of the box without a display server. However, using a virtual framebuffer does the trick. Detailed instructions can be found in Electron's <a href="http://electron.atom.io/docs/tutorial/testing-on-headless-ci/">documentation</a>.</p>
 <p>In short: install <a href="https://en.wikipedia.org/wiki/Xvfb">xvfb</a> and prepend your command with <code>xvfb-run</code>:  </p>
-<div class="codehilite"><pre><span></span>$ xvfb-run open-stage-control -n
+<div class="codehilite"><pre><span></span>xvfb-run open-stage-control -n
 </pre></div>
 
 <h2 id="running-without-electron">Running without Electron<a class="headerlink" href="#running-without-electron" title="Permanent link">&para;</a></h2>
 <p>It is possible to run the server in headless mode without Electron using <a href="https://nodejs.org/en/download/package-manager/">node</a> (v6 or higher) :</p>
-<div class="codehilite"><pre><span></span>$ node /path/to/packaged/open-stage-control/resources/app/ -n
-$ node /path/to/sources/open-stage-control/app/ -n
+<div class="codehilite"><pre><span></span>node /path/to/packaged/open-stage-control/resources/app/ -n
+node /path/to/sources/open-stage-control/app/ -n
 </pre></div>
                 
                   

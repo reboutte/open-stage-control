@@ -518,8 +518,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#use-dynamic-value" title="Use dynamic value" class="md-nav__link">
-    Use dynamic value
+  <a href="#using-the-value" title="Using the value" class="md-nav__link">
+    Using the value
   </a>
   
 </li>
@@ -669,8 +669,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#use-dynamic-value" title="Use dynamic value" class="md-nav__link">
-    Use dynamic value
+  <a href="#using-the-value" title="Using the value" class="md-nav__link">
+    Using the value
   </a>
   
 </li>
@@ -727,16 +727,16 @@
 <div class="admonition note">
 <p>The root panel's <code>id</code> is <code>root</code>.</p>
 </div>
-<h2 id="use-dynamic-value">Use dynamic value<a class="headerlink" href="#use-dynamic-value" title="Permanent link">&para;</a></h2>
-<p>The special property name <code>_value</code><i class="md-icon" title="dynamic">flash_on</i> refers to a widget's value, as opposed to its <code>value</code> property.</p>
-<p>When omitted, the property name defaults to <code>_value</code> : <code>@{widgetId}</code> =&gt; <code>@{widgetId._value}</code></p>
+<h2 id="using-the-value">Using the value<a class="headerlink" href="#using-the-value" title="Permanent link">&para;</a></h2>
+<p>The special property name <code>value</code><i class="md-icon" title="dynamic">flash_on</i> refers to a widget's current value (which can be affected by its <code>value</code> <em>property</em>).</p>
+<p>When omitted, the property name defaults to <code>value</code> : <code>@{widgetId}</code> =&gt; <code>@{widgetId.value}</code></p>
 <h2 id="dynamic-properties">Dynamic properties<a class="headerlink" href="#dynamic-properties" title="Permanent link">&para;</a></h2>
 <p>Some properties, when changed, trigger a complete widget recreation that ends any ongoing user interaction. Also, updating these properties continuously (e.g. when linked to a slider's dynamic value) can be very cpu expensive.</p>
 <p>Some properties have much cheaper update routines and can be considered as <code>dynamic</code>, as in performance safe. These properties are marked in the documentation with a <code></code><i class="md-icon" title="dynamic">flash_on</i>.</p>
 <h2 id="circular-references-cases">Circular references cases<a class="headerlink" href="#circular-references-cases" title="Permanent link">&para;</a></h2>
 <ul>
 <li>container widgets can inherit their children's properties only to define <code>dynamic</code> properties</li>
-<li>widgets can inherit their own <code>_value</code><i class="md-icon" title="dynamic">flash_on</i> property only to define <code>dynamic</code> properties</li>
+<li>widgets can inherit their own <code>value</code><i class="md-icon" title="dynamic">flash_on</i> property only to define <code>dynamic</code> properties</li>
 </ul>
                 
                   

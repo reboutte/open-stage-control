@@ -456,12 +456,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#osc" title="OSC" class="md-nav__link">
-    OSC
+  <a href="#value" title="Value" class="md-nav__link">
+    Value
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default" title="default" class="md-nav__link">
+    default
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#valueflash_on" title="valueflash_on" class="md-nav__link">
@@ -469,6 +476,19 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osc" title="OSC" class="md-nav__link">
+    OSC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#precisionflash_on" title="precisionflash_on" class="md-nav__link">
@@ -501,6 +521,13 @@
           <li class="md-nav__item">
   <a href="#preargsflash_on" title="preArgsflash_on" class="md-nav__link">
     preArgs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypassflash_on" title="bypassflash_on" class="md-nav__link">
+    bypass
   </a>
   
 </li>
@@ -867,12 +894,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#osc" title="OSC" class="md-nav__link">
-    OSC
+  <a href="#value" title="Value" class="md-nav__link">
+    Value
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default" title="default" class="md-nav__link">
+    default
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#valueflash_on" title="valueflash_on" class="md-nav__link">
@@ -880,6 +914,19 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osc" title="OSC" class="md-nav__link">
+    OSC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#precisionflash_on" title="precisionflash_on" class="md-nav__link">
@@ -912,6 +959,13 @@
           <li class="md-nav__item">
   <a href="#preargsflash_on" title="preArgsflash_on" class="md-nav__link">
     preArgs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypassflash_on" title="bypassflash_on" class="md-nav__link">
+    bypass
   </a>
   
 </li>
@@ -1001,14 +1055,23 @@
 </ul>
 </li>
 </ul>
-<h2 id="osc">OSC<a class="headerlink" href="#osc" title="Permanent link">&para;</a></h2>
+<h2 id="value">Value<a class="headerlink" href="#value" title="Permanent link">&para;</a></h2>
+<h3 id="default"><code>default</code><a class="headerlink" href="#default" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>*</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: if set, the widget will be initialized with this <code>value</code> when the session is loaded. Some widgets use this property under specific conditions (see fader's <code>doubleTap</code> for example).</li>
+</ul>
 <h3 id="valueflash_on"><code>value</code><i class="md-icon" title="dynamic">flash_on</i><a class="headerlink" href="#valueflash_on" title="Permanent link">&para;</a></h3>
 <ul>
 <li>type: <code>*</code></li>
 <li>default: <code>empty</code></li>
-<li>usage: if set, the widget will be initialized with this <code>value</code>. This won't send any osc message unless it is changed because of a property inheritance update initiated by an action that should send osc (e.g. dragging a slider).</li>
-<li>note: its <code>type</code> must match the widget's value type (ie a <code>number</code> for sliders, an <code>array</code> for pads, etc).</li>
+<li>usage: set <code>value</code> to define a widget's value depending on other widget's values / properties using <a href="../../extras/property-inheritance/">property inheritance</a> and <a href="../../extras/property-maths/">property maths</a>. When updated by an osc-sending event (e.g. dragging a slider), the widget will send its own osc message as well.</li>
 </ul>
+<div class="admonition notes">
+<p><code>default</code> and <code>value</code> must match the widget's value type (ie a <code>number</code> for sliders, an <code>array</code> for pads, etc) and restrictions (equal to <code>on</code> or <code>off</code> for a push/toggle button)</p>
+</div>
+<h2 id="osc">OSC<a class="headerlink" href="#osc" title="Permanent link">&para;</a></h2>
 <h3 id="precisionflash_on"><code>precision</code><i class="md-icon" title="dynamic">flash_on</i><a class="headerlink" href="#precisionflash_on" title="Permanent link">&para;</a></h3>
 <ul>
 <li>type: <code>integer|string</code></li>
@@ -1078,6 +1141,12 @@
     <span class="p">}</span>
 <span class="p">]</span>
 </pre></div></li>
+</ul>
+<h3 id="bypassflash_on"><code>bypass</code><i class="md-icon" title="dynamic">flash_on</i><a class="headerlink" href="#bypassflash_on" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to prevent the widget from sending any osc message</li>
 </ul>
                 
                   
