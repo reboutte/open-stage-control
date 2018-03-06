@@ -97,7 +97,7 @@
         }, 
         {
             "location": "/editing-sessions/", 
-            "text": "Editing sessions\n\n\nThe session editor can be enabled from the sidepanel. Once enabled, clicking on a widget will make it the \nselected widget\n.\n\n\nRoot panel\n\n\nThe root panel can be selected by clicking on the \"Root\" button in the sidepanel.\n\n\nContext menu\n\n\nRight clicking / long touch on a widget or on a tab will also display a context menu providing useful utilities :\n\n\n\n\nEdit parent\n: select widget's parent for edition\n\n\nCopy\n: copy widget's data\n\n\nCut\n: copy widget's data and delete selected widget\n\n\nPaste\n: paste copied widget in selected container\n\n\nn+1\n : increments the id of the copied widget (and all its children) before pasting\n\n\nClone\n : paste the exact same widget\n\n\nAdd widget\n: create a new widget in selected container\n\n\nAdd tab\n: create a new tab in selected container\n\n\nDelete\n: delete selected tab or widget\n\n\n\n\nSave\n\n\nCurrent session can be exported as a \n.json\n file. When overwriting a session file that's currently is use by other clients, they will reload it automatically.\n\n\nLoad\n\n\nLoading a session file doesn't affect other clients.\n\n\nGrid\n\n\nBy default, widget resizing / dragging snaps to a 10 pixel wide grid. Its width can be customized in the editor (when it's enabled). Setting its width to 1 will disable it. Note that the grid doesn't affect manual setting of a widget's size / position.\n\n\nProperties\n\n\nSelected widget's properties are displayed and can be modified in the sidepanel. The \nwidgets reference\n section lists the available properties for each widget type. Property fields are all multiline (press \nshift + enter\n for new line).\n\n\nProperties are written in JSON, with some flexibility brought by the \nJSON5\n format. For example, doubles quotes around object keys are not mandatory. All input will be converted to standard JSON.\n\n\nWidget resizing / dragging\n\n\nSelected widget can be resized using its south, south-east and east handles. It can be dragged with its north-west handle.\n\n\nBulk editing\n\n\nWhen holding the \nctrl\n key, multiple widgets can be selected for edition:\n\n\n\n\nthey must share the same parent widget\n\n\ncontext-menu actions and properties changes apply to all selected widgets\n\n\nresizing / dragging will not be available", 
+            "text": "Editing sessions\n\n\nThe session editor can be enabled from the sidepanel. Once enabled, clicking on a widget will make it the \nselected widget\n.\n\n\nRoot panel\n\n\nThe root panel can be selected by clicking on the \"Root\" button in the sidepanel.\n\n\nContext menu\n\n\nRight clicking / long touch on a widget or on a tab will also display a context menu providing useful utilities :\n\n\n\n\nEdit parent\n: select widget's parent for edition\n\n\nCopy\n: copy widget's data\n\n\nCut\n: copy widget's data and delete selected widget\n\n\nWrap in\n: wrap the widget in a new container\n\n\nPaste\n: paste copied widget in selected container\n\n\nn+1\n : increments the id of the copied widget (and all its children) before pasting\n\n\nClone\n : paste the exact same widget\n\n\nAdd widget\n: create a new widget in selected container\n\n\nAdd tab\n: create a new tab in selected container\n\n\nDelete\n: delete selected tab or widget\n\n\n\n\nSave\n\n\nCurrent session can be exported as a \n.json\n file. When overwriting a session file that's currently is use by other clients, they will reload it automatically.\n\n\nLoad\n\n\nLoading a session file doesn't affect other clients.\n\n\nGrid\n\n\nBy default, widget resizing / dragging snaps to a 10 pixel wide grid. Its width can be customized in the editor (when it's enabled). Setting its width to 1 will disable it. Note that the grid doesn't affect manual setting of a widget's size / position.\n\n\nProperties\n\n\nSelected widget's properties are displayed and can be modified in the sidepanel. The \nwidgets reference\n section lists the available properties for each widget type. Property fields are all multiline (press \nshift + enter\n for new line).\n\n\nProperties are written in JSON, with some flexibility brought by the \nJSON5\n format. For example, doubles quotes around object keys are not mandatory. All input will be converted to standard JSON.\n\n\nWidget resizing / dragging\n\n\nSelected widget can be resized using its south, south-east and east handles. It can be dragged with its north-west handle. Using this feature will convert position and size values to plain number values, thus breaking previously set percent or inherited values.\n\n\nBulk editing\n\n\nWhen holding the \nctrl\n key (or \ncommand\n on Mac), multiple widgets can be selected for edition:\n\n\n\n\nthey must share the same parent widget\n\n\ncontext-menu actions and properties changes apply to all selected widgets\n\n\nresizing / dragging will affect all selected widgets, relatively to the first selected widget", 
             "title": "Editing sessions"
         }, 
         {
@@ -112,7 +112,7 @@
         }, 
         {
             "location": "/editing-sessions/#context-menu", 
-            "text": "Right clicking / long touch on a widget or on a tab will also display a context menu providing useful utilities :   Edit parent : select widget's parent for edition  Copy : copy widget's data  Cut : copy widget's data and delete selected widget  Paste : paste copied widget in selected container  n+1  : increments the id of the copied widget (and all its children) before pasting  Clone  : paste the exact same widget  Add widget : create a new widget in selected container  Add tab : create a new tab in selected container  Delete : delete selected tab or widget", 
+            "text": "Right clicking / long touch on a widget or on a tab will also display a context menu providing useful utilities :   Edit parent : select widget's parent for edition  Copy : copy widget's data  Cut : copy widget's data and delete selected widget  Wrap in : wrap the widget in a new container  Paste : paste copied widget in selected container  n+1  : increments the id of the copied widget (and all its children) before pasting  Clone  : paste the exact same widget  Add widget : create a new widget in selected container  Add tab : create a new tab in selected container  Delete : delete selected tab or widget", 
             "title": "Context menu"
         }, 
         {
@@ -137,12 +137,12 @@
         }, 
         {
             "location": "/editing-sessions/#widget-resizing-dragging", 
-            "text": "Selected widget can be resized using its south, south-east and east handles. It can be dragged with its north-west handle.", 
+            "text": "Selected widget can be resized using its south, south-east and east handles. It can be dragged with its north-west handle. Using this feature will convert position and size values to plain number values, thus breaking previously set percent or inherited values.", 
             "title": "Widget resizing / dragging"
         }, 
         {
             "location": "/editing-sessions/#bulk-editing", 
-            "text": "When holding the  ctrl  key, multiple widgets can be selected for edition:   they must share the same parent widget  context-menu actions and properties changes apply to all selected widgets  resizing / dragging will not be available", 
+            "text": "When holding the  ctrl  key (or  command  on Mac), multiple widgets can be selected for edition:   they must share the same parent widget  context-menu actions and properties changes apply to all selected widgets  resizing / dragging will affect all selected widgets, relatively to the first selected widget", 
             "title": "Bulk editing"
         }, 
         {
@@ -1342,13 +1342,23 @@
         }, 
         {
             "location": "/extras/theming/", 
-            "text": "Theming\n\n\nTheming is as simple as writing a tiny css file that will override the default style variables defined in \ndefault.scss\n :\n\n\n:\nroot\n \n{\n\n    \n--\ncolor-accent\n:\nred\n;\n\n\n}\n\n\n\n\n\nThis will change the default accent color to red. Variables can also be overridden for a specific subset of elements, for example :\n\n\n.\npanel-container\n \n{\n\n    \n--\ncolor-text\n:\nblue\n;\n\n\n}\n\n\n\n\n\nThis will change the default text color to blue for all elements in panel widgets.", 
+            "text": "Theming\n\n\nBuilt-in themes\n\n\nThemes can be loaded with the \n--theme\n option. Multiple themes can be combined. Built-in themes can be loaded using their name, custom theme files can be loaded using their path.\n\n\nAvailable themes (full color scheme):\n\n\n\n\norange\n: grey and orange theme\n\n\nlight\n: light and blue\n\n\ndark\n: blue night theme\n\n\n\n\nAvailable extensions (alternative visual settings)\n\n\n\n\nalt-buttons\n: colorful active buttons\n\n\nresponsive-fonts\n: bigger texts for bigger screens\n\n\n\n\nCreating a custom theme\n\n\nCreating a custom theme is as simple as writing a tiny css file that will override the default css variables defined in \ndefault.scss\n :\n\n\n:\nroot\n \n{\n\n    \n--\ncolor-accent\n:\nred\n;\n\n\n}\n\n\n\n\n\nThis will change the default accent color to red. Variables can also be overridden for a specific subset of elements, for example :\n\n\n.\npanel-container\n \n{\n\n    \n--\ncolor-text\n:\nblue\n;\n\n\n}\n\n\n\n\n\nThis will change the default text color to blue for all elements in panel widgets.", 
             "title": "Theming"
         }, 
         {
             "location": "/extras/theming/#theming", 
-            "text": "Theming is as simple as writing a tiny css file that will override the default style variables defined in  default.scss  :  : root   { \n     -- color-accent : red ;  }   This will change the default accent color to red. Variables can also be overridden for a specific subset of elements, for example :  . panel-container   { \n     -- color-text : blue ;  }   This will change the default text color to blue for all elements in panel widgets.", 
+            "text": "", 
             "title": "Theming"
+        }, 
+        {
+            "location": "/extras/theming/#built-in-themes", 
+            "text": "Themes can be loaded with the  --theme  option. Multiple themes can be combined. Built-in themes can be loaded using their name, custom theme files can be loaded using their path.  Available themes (full color scheme):   orange : grey and orange theme  light : light and blue  dark : blue night theme   Available extensions (alternative visual settings)   alt-buttons : colorful active buttons  responsive-fonts : bigger texts for bigger screens", 
+            "title": "Built-in themes"
+        }, 
+        {
+            "location": "/extras/theming/#creating-a-custom-theme", 
+            "text": "Creating a custom theme is as simple as writing a tiny css file that will override the default css variables defined in  default.scss  :  : root   { \n     -- color-accent : red ;  }   This will change the default accent color to red. Variables can also be overridden for a specific subset of elements, for example :  . panel-container   { \n     -- color-text : blue ;  }   This will change the default text color to blue for all elements in panel widgets.", 
+            "title": "Creating a custom theme"
         }, 
         {
             "location": "/extras/url-options/", 

@@ -782,6 +782,7 @@
 <li><code>Edit parent</code>: select widget's parent for edition</li>
 <li><code>Copy</code>: copy widget's data</li>
 <li><code>Cut</code>: copy widget's data and delete selected widget</li>
+<li><code>Wrap in</code>: wrap the widget in a new container</li>
 <li><code>Paste</code>: paste copied widget in selected container</li>
 <li><code>n+1</code> : increments the id of the copied widget (and all its children) before pasting</li>
 <li><code>Clone</code> : paste the exact same widget</li>
@@ -799,13 +800,13 @@
 <p>Selected widget's properties are displayed and can be modified in the sidepanel. The <a href="../widgets/widgets">widgets reference</a> section lists the available properties for each widget type. Property fields are all multiline (press <code>shift + enter</code> for new line).</p>
 <p>Properties are written in JSON, with some flexibility brought by the <a href="https://github.com/json5/json5">JSON5</a> format. For example, doubles quotes around object keys are not mandatory. All input will be converted to standard JSON.</p>
 <h2 id="widget-resizing-dragging">Widget resizing / dragging<a class="headerlink" href="#widget-resizing-dragging" title="Permanent link">&para;</a></h2>
-<p>Selected widget can be resized using its south, south-east and east handles. It can be dragged with its north-west handle.</p>
+<p>Selected widget can be resized using its south, south-east and east handles. It can be dragged with its north-west handle. Using this feature will convert position and size values to plain number values, thus breaking previously set percent or inherited values.</p>
 <h2 id="bulk-editing">Bulk editing<a class="headerlink" href="#bulk-editing" title="Permanent link">&para;</a></h2>
-<p>When holding the <code>ctrl</code> key, multiple widgets can be selected for edition:</p>
+<p>When holding the <code>ctrl</code> key (or <code>command</code> on Mac), multiple widgets can be selected for edition:</p>
 <ul>
 <li>they must share the same parent widget</li>
 <li>context-menu actions and properties changes apply to all selected widgets</li>
-<li>resizing / dragging will not be available</li>
+<li>resizing / dragging will affect all selected widgets, relatively to the first selected widget</li>
 </ul>
                 
                   

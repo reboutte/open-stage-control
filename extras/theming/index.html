@@ -523,9 +523,43 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Theming
+      </label>
+    
     <a href="./" title="Theming" class="md-nav__link md-nav__link--active">
       Theming
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-themes" title="Built-in themes" class="md-nav__link">
+    Built-in themes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-custom-theme" title="Creating a custom theme" class="md-nav__link">
+    Creating a custom theme
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -624,6 +658,27 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-themes" title="Built-in themes" class="md-nav__link">
+    Built-in themes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-custom-theme" title="Creating a custom theme" class="md-nav__link">
+    Creating a custom theme
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -638,7 +693,21 @@
                 
                 
                 <h1 id="theming">Theming<a class="headerlink" href="#theming" title="Permanent link">&para;</a></h1>
-<p>Theming is as simple as writing a tiny css file that will override the default style variables defined in <a href="https://github.com/jean-emmanuel/open-stage-control/blob/master/src/browser/scss/themes/default.scss">default.scss</a> :</p>
+<h2 id="built-in-themes">Built-in themes<a class="headerlink" href="#built-in-themes" title="Permanent link">&para;</a></h2>
+<p>Themes can be loaded with the <code>--theme</code> option. Multiple themes can be combined. Built-in themes can be loaded using their name, custom theme files can be loaded using their path.</p>
+<p>Available themes (full color scheme):</p>
+<ul>
+<li><code>orange</code>: grey and orange theme</li>
+<li><code>light</code>: light and blue</li>
+<li><code>dark</code>: blue night theme</li>
+</ul>
+<p>Available extensions (alternative visual settings)</p>
+<ul>
+<li><code>alt-buttons</code>: colorful active buttons</li>
+<li><code>responsive-fonts</code>: bigger texts for bigger screens</li>
+</ul>
+<h2 id="creating-a-custom-theme">Creating a custom theme<a class="headerlink" href="#creating-a-custom-theme" title="Permanent link">&para;</a></h2>
+<p>Creating a custom theme is as simple as writing a tiny css file that will override the default css variables defined in <a href="https://github.com/jean-emmanuel/open-stage-control/blob/master/src/browser/scss/themes/default.scss">default.scss</a> :</p>
 <div class="codehilite"><pre><span></span><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
     <span class="err">--</span><span class="n">color-accent</span><span class="p">:</span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
