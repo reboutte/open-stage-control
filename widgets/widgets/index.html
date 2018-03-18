@@ -215,7 +215,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../extras/property-inheritance/" title="Extras" class="md-tabs__link">
+        <a href="../../extras/advanced-property-syntax/" title="Extras" class="md-tabs__link">
           Extras
         </a>
       
@@ -684,8 +684,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extras/property-inheritance/" title="Property inheritance" class="md-nav__link">
-      Property inheritance
+    <a href="../../extras/advanced-property-syntax/" title="Advanced property syntax" class="md-nav__link">
+      Advanced property syntax
     </a>
   </li>
 
@@ -696,8 +696,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extras/property-maths/" title="Property maths" class="md-nav__link">
-      Property maths
+    <a href="../../extras/css-tips/" title="CSS Tips" class="md-nav__link">
+      CSS Tips
     </a>
   </li>
 
@@ -1048,17 +1048,8 @@
 <ul>
 <li>type: <code>string</code></li>
 <li>default: <em>empty</em></li>
-<li>usage: the <code>css</code> property can be used to override inherited <a href="../../extras/theming/">theming</a> variables. Also, some widgets expose specific theming variables that allow a finer customization. Standard <code>css</code> properties can be applied to the widget's root element through this property, <code>css</code> selectors can also be used apply custom styles to the widget's children.</li>
-<li>examples:<ul>
-<li><code>border-radius:5rem; .label {font-size: 20rem}</code> will round the widget's corners and increase its label's font-size and all its children's labels'</li>
-<li><code>border-radius:5rem; &gt; .label {font-size: 20rem}</code> will round the widget's corners and increase its label's font-size (the <code>&gt;</code> selector targets only the direct children of the widget element)</li>
+<li>usage: applies CSS rules to widget. See <a href="../../extras/css-tips/">css tips</a>.</li>
 </ul>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">&amp; { }</p>
-<p>The <code>&amp;</code> selector can be used to target the widget container.</p>
-</div>
 <h2 id="value">Value<a class="headerlink" href="#value" title="Permanent link">&para;</a></h2>
 <h3 id="default"><code>default</code><a class="headerlink" href="#default" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1070,7 +1061,7 @@
 <ul>
 <li>type: <code>*</code></li>
 <li>default: <code>empty</code></li>
-<li>usage: set <code>value</code> to define a widget's value depending on other widget's values / properties using <a href="../../extras/property-inheritance/">property inheritance</a> and <a href="../../extras/property-maths/">property maths</a>. When updated by an osc-sending event (e.g. dragging a slider), the widget will send its own osc message as well.</li>
+<li>usage: set <code>value</code> to define a widget's value depending on other widget's values / properties using <a href="../extras/property-inheritance.md">property inheritance</a> and <a href="../extras/property-maths.md">property maths</a>. When updated by an osc-sending event (e.g. dragging a slider), the widget will send its own osc message as well.</li>
 </ul>
 <div class="admonition note">
 <p><code>default</code> and <code>value</code> must match the widget's value type (ie a <code>number</code> for sliders, an <code>array</code> for pads, etc) and restrictions (equal to <code>on</code> or <code>off</code> for a push/toggle button)</p>
@@ -1152,6 +1143,9 @@
 <li>default: <code>false</code></li>
 <li>usage: set to <code>true</code> to prevent the widget from sending any osc message</li>
 </ul>
+<div class="admonition note">
+<p>Changing OSC properties dynamically using advanced property syntax is likely to break synchronisation between multiple clients. </p>
+</div>
                 
                   
                 
