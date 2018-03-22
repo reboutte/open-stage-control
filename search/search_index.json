@@ -1557,7 +1557,7 @@
         }, 
         {
             "location": "/examples/", 
-            "text": "Community examples\n\n\nFeel free to submitt you own by \nopening an issue\n on github.\n\n\nArdour\n\n\nhttps://github.com/jean-emmanuel/ardour-control\n\n\n\n\nReaper\n\n\nhttps://github.com/ThrashJazzAssassin/REAPER-OSC-panels\n\n\n\n\nQLab\n\n\nhttps://qlabcookbook.com/1965/02/18/2672/\n\n\nBitwig\n\n\nhttps://github.com/kdejaeger/open-stage-control-bitwig\n\n\nhttp://www.mossgrabers.de/Software/Bitwig/Bitwig.html\n\n\nhttps://www.youtube.com/watch?v=u-fgArpsHQQ\n\n\nhttps://www.youtube.com/watch?v=RvEMlo72ynQ", 
+            "text": "Community examples\n\n\nFeel free to submitt you own by \nopening an issue\n on github.\n\n\nArdour\n\n\n\n\nArdour Control\n\n\n\n\n\n\nReaper\n\n\n\n\nReaper OSC Panels\n\n\n\n\n\n\nQLab\n\n\n\n\n\n\nLighting Fixture Profiles\n\n\n\n\n\n\n\n\nCustom Control QLab Lighting \n Visualize Output\n\n\n\n\n\n\nBitwig\n\n\n\n\n\n\nOpen Stage Control Bitwig\n\n\n\n\n\n\n\n\nOpenStageControl4Bitwig\n\n\n\n\nhttps://www.youtube.com/watch?v=u-fgArpsHQQ\n\n\nhttps://www.youtube.com/watch?v=RvEMlo72ynQ", 
             "title": "Examples"
         }, 
         {
@@ -1567,22 +1567,22 @@
         }, 
         {
             "location": "/examples/#ardour", 
-            "text": "https://github.com/jean-emmanuel/ardour-control", 
+            "text": "Ardour Control", 
             "title": "Ardour"
         }, 
         {
             "location": "/examples/#reaper", 
-            "text": "https://github.com/ThrashJazzAssassin/REAPER-OSC-panels", 
+            "text": "Reaper OSC Panels", 
             "title": "Reaper"
         }, 
         {
             "location": "/examples/#qlab", 
-            "text": "https://qlabcookbook.com/1965/02/18/2672/", 
+            "text": "Lighting Fixture Profiles     Custom Control QLab Lighting   Visualize Output", 
             "title": "QLab"
         }, 
         {
             "location": "/examples/#bitwig", 
-            "text": "https://github.com/kdejaeger/open-stage-control-bitwig  http://www.mossgrabers.de/Software/Bitwig/Bitwig.html  https://www.youtube.com/watch?v=u-fgArpsHQQ  https://www.youtube.com/watch?v=RvEMlo72ynQ", 
+            "text": "Open Stage Control Bitwig     OpenStageControl4Bitwig   https://www.youtube.com/watch?v=u-fgArpsHQQ  https://www.youtube.com/watch?v=RvEMlo72ynQ", 
             "title": "Bitwig"
         }, 
         {
