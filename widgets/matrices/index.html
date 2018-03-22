@@ -494,13 +494,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#color" title="color" class="md-nav__link">
-    color
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#options" title="options" class="md-nav__link">
     options
   </a>
@@ -556,13 +549,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#color_1" title="color" class="md-nav__link">
-    color
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#options_1" title="options" class="md-nav__link">
     options
   </a>
@@ -613,13 +599,6 @@
           <li class="md-nav__item">
   <a href="#split_2" title="split" class="md-nav__link">
     split
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#color_2" title="color" class="md-nav__link">
-    color
   </a>
   
 </li>
@@ -918,13 +897,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#color" title="color" class="md-nav__link">
-    color
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#options" title="options" class="md-nav__link">
     options
   </a>
@@ -980,13 +952,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#color_1" title="color" class="md-nav__link">
-    color
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#options_1" title="options" class="md-nav__link">
     options
   </a>
@@ -1037,13 +1002,6 @@
           <li class="md-nav__item">
   <a href="#split_2" title="split" class="md-nav__link">
     split
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#color_2" title="color" class="md-nav__link">
-    color
   </a>
   
 </li>
@@ -1149,7 +1107,7 @@
 <li>usage: number of faders in the row, each fader will inherit its parent's properties and the following ones (where <code>i</code> is the fader's index in the row)<ul>
 <li><code>id</code>: same as the widget's with <code>/i</code> appended to it</li>
 <li><code>label</code>: <code>i</code></li>
-<li><code>address</code>: same as the widget's with <code>/i</code> appended to it</li>
+<li><code>address</code>: see <code>split</code></li>
 </ul>
 </li>
 </ul>
@@ -1167,15 +1125,12 @@
 </ul>
 <h3 id="split"><code>split</code><a class="headerlink" href="#split" title="Permanent link">&para;</a></h3>
 <ul>
-<li>type: <code>boolean</code></li>
+<li>type: <code>boolean|string</code></li>
 <li>default: <code>false</code></li>
-<li>usage: if <code>true</code>, the fader's index will be appended to the widget's osc <code>address</code>; if <code>false</code> it will be prepended to the widget's <code>preArgs</code></li>
-</ul>
-<h3 id="color"><code>color</code><a class="headerlink" href="#color" title="Permanent link">&para;</a></h3>
-<ul>
-<li>type: <code>string|array</code></li>
-<li>default: <code>auto</code>, inherited accent color</li>
-<li>usage: can be an <code>array</code> of css color <code>strings</code>, which will be sequentially passed to the faders</li>
+<li>usage:</li>
+<li><code>true</code>: the widget's index will be appended to the matrice's osc <code>address</code></li>
+<li><code>false</code>: it will be prepended to the widget's <code>preArgs</code></li>
+<li><code>string</code>: will be used to define the widgets' addresses, replacing dollar signs (<code>$</code>) with  their respective index (to insert the actual dollar sign, it must be escaped with a backslash (<code>\$</code>)).</li>
 </ul>
 <h3 id="options"><code>options</code><a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1195,7 +1150,7 @@
 <li>usage: defines the number of columns and and rows. Each cell will contain a toggle button that will inherit its parent's properties and the following ones (where <code>i</code> is the fader's index in the row)<ul>
 <li><code>id</code>: same as the widget's with <code>/i</code> appended to it</li>
 <li><code>label</code>: <code>i</code></li>
-<li><code>address</code>: same as the widget's with <code>/i</code> appended to it</li>
+<li><code>address</code>: see <code>split</code></li>
 </ul>
 </li>
 </ul>
@@ -1219,15 +1174,12 @@
 </ul>
 <h3 id="split_1"><code>split</code><a class="headerlink" href="#split_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>type: <code>boolean</code></li>
+<li>type: <code>boolean|string</code></li>
 <li>default: <code>false</code></li>
-<li>usage: if <code>true</code>, the toggle's index will be appended to the widget's osc <code>address</code>; if <code>false</code> it will be prepended to the widget's <code>preArgs</code></li>
-</ul>
-<h3 id="color_1"><code>color</code><a class="headerlink" href="#color_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>type: <code>string|array</code></li>
-<li>default: <code>auto</code>, inherited accent color</li>
-<li>usage: can be an <code>array</code> of css color <code>strings</code>, which will be sequentially passed to the toggles</li>
+<li>usage:</li>
+<li><code>true</code>: the widget's index will be appended to the matrice's osc <code>address</code></li>
+<li><code>false</code>: it will be prepended to the widget's <code>preArgs</code></li>
+<li><code>string</code>: will be used to define the widgets' addresses, replacing dollar signs (<code>$</code>) with  their respective index (to insert the actual dollar sign, it must be escaped with a backslash (<code>\$</code>)).</li>
 </ul>
 <h3 id="options_1"><code>options</code><a class="headerlink" href="#options_1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1247,7 +1199,7 @@
 <li>usage: defines the number of columns and and rows. Each cell will contain a push button that will inherit its parent's properties and the following ones (where <code>i</code> is the fader's index in the row)<ul>
 <li><code>id</code>: same as the widget's with <code>/i</code> appended to it</li>
 <li><code>label</code>: <code>i</code></li>
-<li><code>address</code>: same as the widget's with <code>/i</code> appended to it</li>
+<li><code>address</code>: see <code>split</code></li>
 </ul>
 </li>
 </ul>
@@ -1271,22 +1223,19 @@
 </ul>
 <h3 id="split_2"><code>split</code><a class="headerlink" href="#split_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>type: <code>boolean</code></li>
+<li>type: <code>boolean|string</code></li>
 <li>default: <code>false</code></li>
-<li>usage: if <code>true</code>, the push's index will be appended to the widget's osc <code>address</code>; if <code>false</code> it will be prepended to the widget's <code>preArgs</code></li>
-</ul>
-<h3 id="color_2"><code>color</code><a class="headerlink" href="#color_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>type: <code>string|array</code></li>
-<li>default: <code>auto</code>, inherited accent color</li>
-<li>usage: can be an <code>array</code> of css color <code>strings</code>, which will be sequentially passed to the pushes</li>
+<li>usage:</li>
+<li><code>true</code>: the widget's index will be appended to the matrice's osc <code>address</code></li>
+<li><code>false</code>: it will be prepended to the widget's <code>preArgs</code></li>
+<li><code>string</code>: will be used to define the widgets' addresses, replacing dollar signs (<code>$</code>) with  their respective index (to insert the actual dollar sign, it must be escaped with a backslash (<code>\$</code>)).</li>
 </ul>
 <h3 id="options_2"><code>options</code><a class="headerlink" href="#options_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>see push's <a href="../buttons/#push"><code>options</code></a></li>
 </ul>
 <h2 id="keyboard">Keyboard<a class="headerlink" href="#keyboard" title="Permanent link">&para;</a></h2>
-<p>This one works pretty much like the multipush, excepts it looks like a piano keyboard ad</p>
+<p>This one works pretty much like the multipush, excepts it looks like a piano keyboard.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;keyboard&#39;</span><span class="p">,</span>
     <span class="c1">// etc</span>
@@ -1320,9 +1269,12 @@
 </ul>
 <h3 id="split_3"><code>split</code><a class="headerlink" href="#split_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li>type: <code>boolean</code></li>
+<li>type: <code>boolean|string</code></li>
 <li>default: <code>false</code></li>
-<li>usage: if <code>true</code>, the note's midi code will be appended to the widget's osc <code>address</code>; if <code>false</code> it will be prepended to the widget's <code>preArgs</code></li>
+<li>usage:</li>
+<li><code>true</code>: the widget's index will be appended to the matrice's osc <code>address</code></li>
+<li><code>false</code>: it will be prepended to the widget's <code>preArgs</code></li>
+<li><code>string</code>: will be used to define the widgets' addresses, replacing dollar signs (<code>$</code>) with  their respective index (to insert the actual dollar sign, it must be escaped with a backslash (<code>\$</code>)).</li>
 </ul>
 <h3 id="options_3"><code>options</code><a class="headerlink" href="#options_3" title="Permanent link">&para;</a></h3>
 <ul>
