@@ -15,7 +15,7 @@ function pointerDownHandler(event) {
 
     targets[event.pointerId] = event.target
 
-    normalizeDragEvent(event)
+    event = normalizeDragEvent(event)
 
     previousPointers[event.pointerId] = event
 
@@ -25,7 +25,7 @@ function pointerDownHandler(event) {
 
 function pointerMoveHandler(event) {
 
-    normalizeDragEvent(event, previousPointers[event.pointerId])
+    event = normalizeDragEvent(event, previousPointers[event.pointerId])
 
     event.stopPropagation = true
 
@@ -66,7 +66,7 @@ function pointerMoveHandler(event) {
 
 function pointerUpHandler(event) {
 
-    normalizeDragEvent(event, previousPointers[event.pointerId])
+    event = normalizeDragEvent(event, previousPointers[event.pointerId])
 
     triggerWidgetEvent(targets[event.pointerId], 'dragend', event)
 
